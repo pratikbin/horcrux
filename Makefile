@@ -10,7 +10,7 @@ ifeq ($(OS),Linux)
   NPROCS := $(shell grep -c ^processor /proc/cpuinfo)
 endif
 
-ifeq ($(OS),Darwin) # Assume Mac OS
+ifeq ($(OS),Darwin)
   NPROCS := $(shell sysctl -n hw.ncpu)
 endif
 
